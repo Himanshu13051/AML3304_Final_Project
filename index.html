@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    
+
+<button onclick="location.href = 'https://helpful-kheer-4bfc2a.netlify.app/';" id="myButton1" class="button button1">About Us</button>
+<button onclick="location.href = 'https://celadon-tarsier-addf24.netlify.app/';" id="myButton2" class="button button2">Our Services</button>
+<button onclick="location.href = 'https://guileless-lily-3d4e5a.netlify.app/';" id="myButton3" class="button button3">Our Customers</button>
+
+
+    <div class="container">
+        <div class="current-info">
+
+            <div class="date-container">
+                <div class="time" id="time">
+                    12:30
+                </div>
+            
+            </div>
+
+            <div class="place-container">
+                <div class="time-zone" id="time-zone">America</div>
+                <div id="country" class="country">Toronto</div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="other">
+                <div class="day">Monday</div>
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="code.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCiMvkfEsfJarzq-eCxikgiFyua3S1Eews",
+          authDomain: "aml-3304---final-project.firebaseapp.com",
+          projectId: "aml-3304---final-project",
+          storageBucket: "aml-3304---final-project.appspot.com",
+          messagingSenderId: "749889841254",
+          appId: "1:749889841254:web:ca1a309795f7cde22c65a7",
+          measurementId: "G-YL02526015"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
